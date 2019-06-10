@@ -1,3 +1,4 @@
+```
 /*
  * @lc app=leetcode id=3 lang=c
  *
@@ -66,5 +67,4 @@ int lengthOfLongestSubstring(char * s){
     }
     return maxLen;
 }
-
-
+```

@@ -1,3 +1,4 @@
+```
 /*
  * @lc app=leetcode id=1 lang=c
  *
@@ -79,3 +80,4 @@ int* twoSum(int* nums, int numsSize, int target,int *returnSize) {
     }
     return NULL;
 }
+```

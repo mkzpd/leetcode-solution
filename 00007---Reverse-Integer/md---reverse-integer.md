@@ -1,3 +1,4 @@
+```
 /*
  * @lc app=leetcode id=7 lang=c
  *
@@ -52,5 +53,4 @@ int reverse(int x){
     }while(x);
     return (val > INT_MAX || val < INT_MIN) ? 0 : val;
 }
-
-
+```

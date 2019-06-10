@@ -1,3 +1,4 @@
+```
 /*
  * @lc app=leetcode id=9 lang=c
  *
@@ -59,4 +60,4 @@ bool isPalindrome(int x){
     
     return x == y;
 }
-
+```

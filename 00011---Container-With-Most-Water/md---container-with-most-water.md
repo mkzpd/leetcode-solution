@@ -1,3 +1,4 @@
+```
 /*
  * @lc app=leetcode id=11 lang=c
  *
@@ -48,4 +49,4 @@ int maxArea(int* height, int heightSize) {
     }
     return max;
 }
-
+```

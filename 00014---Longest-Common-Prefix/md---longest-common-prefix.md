@@ -1,3 +1,4 @@
+```
 /*
  * @lc app=leetcode id=14 lang=c
  *
@@ -54,6 +55,4 @@ char * longestCommonPrefix(char ** strs, int strsSize){
     }
     return temp;
 }
-
-
-
+```

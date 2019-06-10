@@ -1,3 +1,4 @@
+```
 /*
  * @lc app=leetcode id=8 lang=c
  *
@@ -114,3 +115,4 @@ int myAtoi(char * str){
     }
     return sign == 1 ? result : -result;
 }
+```
