@@ -38,21 +38,41 @@
  */
 
 
-// maybe have bug that char *temp be changed.
-
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
-char * longestCommonPrefix(char ** strs, int strsSize){
-    char* temp;
-    int i, j;
-    if(strsSize <= 0)
-        return "";
-    temp = strs[0];
-    for(i=1; i<strsSize; i++){
-        j = 0;
-        while(temp[j] && strs[i][j] && temp[j]==strs[i][j])
-            j++;
-        temp[j] = '\0';
+char* longestCommonPrefix(char** strs, int strsSize)
+{
+    int i, count = 0;
+    char *result = (char *)malloc(sizeof(char) * 1000);
+    while (strsSize > 0) {
+        char c = strs[0][count];
+        for (i = 1; i < strsSize; i++) {
+            if (c != strs[i][count]) break;
+        }
+        if (i == strsSize && c != '\0') {
+            result[count++] = c;
+        } else {
+            break;
+        }
     }
-    return temp;
+    result[count++] = '\0';
+    return result;
+}
+
+
+int main()
+{
+    char *array[100] = {"flower","flow","flight"};
+    
+    //char *array[100] = {"dog","racecar","car"};
+    
+    //char *array[100] = {"dogy","dogyr","dogysvvf"};
+    
+    //char *array[100] = {"aaaaabbb","aaaaads","aaaaalds"};
+
+    char *result = longestCommonPrefix(array,3);
+    printf("%s\n",result);
+    return 0;
 }
