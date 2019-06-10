@@ -73,7 +73,7 @@ int lengthOfLongestSubstring(char * s){
 int main(int argc, char **argv)
 {
     if (argc != 2) {
-        fprintf(stderr, "Usage: ./longest-substring-without-repeating-characters string     (for example: ./longest-substring-without-repeating-characters abcabcbb)\n");
+        fprintf(stderr, "Usage: ./test string     (for example: ./test abcabcbb)\n");
         exit(-1);
     }
 

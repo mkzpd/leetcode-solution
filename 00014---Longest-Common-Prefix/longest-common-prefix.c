@@ -61,18 +61,12 @@ char* longestCommonPrefix(char** strs, int strsSize)
     return result;
 }
 
-
-int main()
+int main(int argc, char **argv)
 {
-    char *array[100] = {"flower","flow","flight"};
-    
-    //char *array[100] = {"dog","racecar","car"};
-    
-    //char *array[100] = {"dogy","dogyr","dogysvvf"};
-    
-    //char *array[100] = {"aaaaabbb","aaaaads","aaaaalds"};
-
-    char *result = longestCommonPrefix(array,3);
-    printf("%s\n",result);
+    if (argc < 2) {
+        fprintf(stderr, "Usage: ./test string string ...     (for example: ./test flower flow flight )\n");
+        exit(-1);
+    }
+    printf("%s\n", longestCommonPrefix(argv + 1, argc - 1));
     return 0;
 }

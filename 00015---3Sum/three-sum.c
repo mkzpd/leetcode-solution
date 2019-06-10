@@ -174,7 +174,7 @@ int main()
         printf("[%d, %d, %d]\n", list[tmp][0], list[tmp][1], list[tmp][2]);
         free(list[tmp]);
     }
-    printf("return size: %d\n", returnSize);
+    //printf("return size: %d\n", returnSize);
     free(returnColumnSizes);
     return 0;
 }

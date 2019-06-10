@@ -139,7 +139,7 @@ void printShow(struct ListNode *ln)
 int main(int argc, char **argv)
 {
     if (argc < 3) {
-        fprintf(stderr, "Usage: ./add-two-numbers n1 n2     (for example: ./add-two-numbers 243 564)\n");
+        fprintf(stderr, "Usage: ./test n1 n2     (for example: ./test 243 564)\n");
         exit(-1);
     }
 
