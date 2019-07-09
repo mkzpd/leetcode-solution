@@ -99,25 +99,26 @@ struct ListNode* addTwoNumbers(struct ListNode* l1, struct ListNode* l2){
     return head;
 }
 
-static struct ListNode *createNode(const char *digits)
+static struct ListNode *createNode(char *digits)
 {
     struct ListNode *res, *p, *prev;
-    int first = 1;
+    int i = 0, first = 1;
     int len = strlen(digits);
-    const char *c = digits + len - 1;
+    char *c = digits;
     prev = NULL;
-    while (len-- > 0) {
-        p = (struct ListNode *)malloc(sizeof(*p));
+    while (i < len) {
+        p = (struct ListNode *)malloc(sizeof(struct ListNode));
         if (first) {
             first = 0;
             res = p;
         }
-        p->val = *c-- - '0';
+        p->val = *(c++) - '0';
         p->next = NULL;
         if (prev != NULL) {
             prev->next = p;
         }
         prev = p;
+        i++;
     }
 
     return res;
@@ -125,15 +126,23 @@ static struct ListNode *createNode(const char *digits)
 
 void printShow(struct ListNode *ln)
 {
-    int sum = 0, factor = 1;
     while (ln != NULL) {
-        sum += ln->val * factor;
-        factor *= 10;
+        printf("%d",ln->val);
         ln = ln->next;
     }
-    printf(" %d\n", sum);
+    printf("\n");
 }
 
+void clearList(struct ListNode ** L )
+{
+    struct ListNode *temp, *pNext;
+    temp = (*L);
+    while(temp){
+        pNext = temp->next;
+        free(temp);
+        temp = pNext;
+    }
+}
 
 
 int main(int argc, char **argv)
@@ -146,8 +155,9 @@ int main(int argc, char **argv)
     struct ListNode *l1 = createNode(argv[1]);
     struct ListNode *l2 = createNode(argv[2]);
     struct ListNode *res = addTwoNumbers(l1, l2);
-    printShow(l1);
-    printShow(l2);
     printShow(res);
+    clearList(&l1);
+    clearList(&l2);
+    clearList(&res);
     return 0;
 }
