@@ -4,7 +4,7 @@
 
 char* convert(char* s, int numRows) {
     int n=strlen(s);
-    char *a = (char *)malloc(2000 *sizeof(char));
+    char *a = (char *)malloc((n+1) * sizeof(char));
     int k=0;
     if(numRows==1 || n<=numRows)
         return s;
