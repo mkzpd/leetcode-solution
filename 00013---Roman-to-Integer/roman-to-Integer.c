@@ -19,6 +19,8 @@ int getVal(char c)
             return 500;
         case 'M':
             return 1000;
+        default:
+            exit(1);
     }
 }
 
