@@ -99,7 +99,7 @@ struct ListNode* addTwoNumbers(struct ListNode* l1, struct ListNode* l2){
     return head;
 }
 
-static struct ListNode *createNode(char *digits)
+struct ListNode *createNode(char *digits)
 {
     struct ListNode *res, *p, *prev;
     int i = 0, first = 1;
