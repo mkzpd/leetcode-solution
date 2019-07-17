@@ -35,6 +35,7 @@ int main(int argc, char *argv[])
     }
     char *res = countAndSay(atoi(argv[1]));
     printf("%s\n",res);
+    free(res);
     return 0;
 }
 
