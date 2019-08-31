@@ -70,7 +70,7 @@ int main()
     }
     free(returnColumnSizes);
     returnColumnSizes = NULL;
-    for(i = 0; i < returnSize; i++){
+    for(i = 0; i < 512; i++){
         free(result[i]);
         result[i] = NULL;
     }
