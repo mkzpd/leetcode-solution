@@ -35,6 +35,9 @@ int** combinationSum(int* candidates, int candidatesSize, int target, int* retur
 
     *returnSize = 0;
     subSUm(candidates, candidatesSize, target, returnColumnSizes, returnSize, 0, sumArr, 0, sumbuff);
+    
+    free(sumbuff);
+    sumbuff = NULL;
 
     return sumArr;
 }
@@ -64,6 +67,14 @@ int main()
         printf("\n");
         
     }
+    free(returnColumnSizes);
+    returnColumnSizes = NULL;
+    for(i = 0; i < returnSize; i++){
+        free(result[i]);
+        result[i] = NULL;
+    }
+    free(result);
+    result = NULL;
     printf("\n");
     return 0;
 }
