@@ -7,7 +7,8 @@
  * The sizes of the arrays are returned as *returnColumnSizes array.
  * Note: Both returned array and *columnSizes array must be malloced, assume caller calls free().
  */
-void subSUm(int* candidates, int candidatesSize, int target, int** returnColumnSizes, int* returnSize, int index, int **sumArr, int curpos, int * sumbuff){
+void subSUm(int* candidates, int candidatesSize, int target, int** returnColumnSizes, int* returnSize, int index, int **sumArr, 
+            int curpos, int * sumbuff){
 
     if(target < 0){
          return;
