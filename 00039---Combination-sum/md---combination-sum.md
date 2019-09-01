@@ -1,3 +1,4 @@
+```
 /*
  * @lc app=leetcode id=39 lang=c
  *
@@ -92,3 +93,4 @@ int** combinationSum(int* candidates, int candidatesSize, int target, int* retur
 
     return sumArr;
 }
+```

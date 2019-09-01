@@ -1,3 +1,4 @@
+```
 /*
  * @lc app=leetcode id=40 lang=c
  *
@@ -98,4 +99,4 @@ int** combinationSum2(int* candidates, int candidatesSize, int target, int* retu
     dfs(candidates, candidatesSize, 0, target, solution, 0, used, results, *returnColumnSizes, returnSize);
     return results;
 }
-
+```
