@@ -1,3 +1,3 @@
 # leetcode-solution
 
-### c and python3 code for leetcode solution.
+### python3 and c code for leetcode solution.
